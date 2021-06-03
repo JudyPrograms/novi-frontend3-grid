@@ -1,1 +1,92 @@
-/*Maak hier jouw CSS!*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: monospace;
+    color: hsl(209, 33%, 24%);
+}
+
+.container * {
+    padding: 10px;
+    margin: 8px;
+}
+
+.container {
+    padding: 8px;
+    background-color: hsl(75, 100%, 96%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-areas:
+            "A C C"
+            "B C C"
+            "B E D"
+            "B E ."
+            "F F F";
+}
+
+#A {
+    background-color: hsl(209, 33%, 74%);
+    grid-area: A;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0;
+}
+
+#B {
+    background-color: hsl(74, 100%, 88%);
+    grid-area: B;
+}
+
+#C {
+    background-color: hsl(20, 100%, 84%);
+    grid-area: C;
+}
+
+#D {
+    background-color: hsl(192, 44%, 85%);
+    grid-area: D;
+}
+
+#E {
+    background-color: hsl(31, 49%, 72%);
+    grid-area: E;
+}
+
+#F {
+    background-color: hsl(209, 33%, 74%);
+    grid-area: F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 576px) {
+    .container * {
+        padding: 10px;
+        margin: 8px;
+    }
+
+    .container {
+        padding: 8px;
+        background-color: hsl(75, 100%, 96%);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-template-areas:
+            "A"
+            "B"
+            "C"
+            "D"
+            "E"
+            "."
+            "F";
+    }
+
+}
